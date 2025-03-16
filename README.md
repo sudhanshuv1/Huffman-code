@@ -1,46 +1,49 @@
-Huffman Algorithm is a widely used data compression technique based on the frequency of characters. It uses variable-length encoding to minimize the overall size of the data. Here's how the algorithm works step by step:
-Steps of the Huffman Algorithm
+# Huffman Algorithm
 
-    Frequency Count:
+### Huffman Algorithm is a widely used data compression technique based on the frequency of characters. It uses variable-length encoding to minimize the overall size of the data. Here's how the algorithm works step by step:
 
-        Start by calculating the frequency of each character in the input data (e.g., text or symbols).
+### Steps of the Huffman Algorithm
 
-    Priority Queue (Min-Heap):
+    1. Frequency Count:
 
-        Insert all the characters into a priority queue (or min-heap) based on their frequency. Each character is treated as a tree node.
+        - Start by calculating the frequency of each character in the input data (e.g., text or symbols).
 
-    Build the Huffman Tree:
+    2. Priority Queue (Min-Heap):
 
-        While there is more than one node in the priority queue:
+        - Insert all the characters into a priority queue (or min-heap) based on their frequency. Each character is treated as a tree node.
 
-            Remove the two nodes with the smallest frequency from the queue.
+    3. Build the Huffman Tree:
 
-            Combine these two nodes into a new parent node, where the frequency of the parent is the sum of the two child nodes' frequencies.
+        - While there is more than one node in the priority queue:
 
-            Insert the new parent node back into the priority queue.
+            - Remove the two nodes with the smallest frequency from the queue.
 
-        Repeat until only one node remains in the queue, which becomes the root of the Huffman tree.
+            - Combine these two nodes into a new parent node, where the frequency of the parent is the sum of the two child nodes' frequencies.
 
-    Generate Codes:
+            - Insert the new parent node back into the priority queue.
 
-        Traverse the Huffman tree to assign binary codes to each character:
+        - Repeat until only one node remains in the queue, which becomes the root of the Huffman tree.
 
-            Assign 0 for the left child and 1 for the right child during traversal.
+    4. Generate Codes:
 
-            Each character is given a unique code based on its position in the tree.
+        - Traverse the Huffman tree to assign binary codes to each character:
 
-    Encode the Data:
+            - Assign 0 for the left child and 1 for the right child during traversal.
 
-        Replace each character in the input data with its corresponding binary code from the Huffman tree.
+            - Each character is given a unique code based on its position in the tree.
 
-    Decode the Data:
+    5. Encode the Data:
 
-        To decompress, use the binary codes to traverse the Huffman tree and retrieve the original characters.
+       -  Replace each character in the input data with its corresponding binary code from the Huffman tree.
 
-Key Features
+    6. Decode the Data:
 
-    Prefix-Free Codes: No code is a prefix of another, making decoding unambiguous.
+        - To decompress, use the binary codes to traverse the Huffman tree and retrieve the original characters.
 
-    Greedy Algorithm: The algorithm ensures optimal compression by always merging the least frequent nodes first.
+## Key Features
 
-    Efficient Representation: Frequently used characters have shorter codes, minimizing the overall size.
+    - *Prefix-Free Codes:* No code is a prefix of another, making decoding unambiguous.
+
+    - *Greedy Algorithm:* The algorithm ensures optimal compression by always merging the least frequent nodes first.
+
+    - *Efficient Representation:* Frequently used characters have shorter codes, minimizing the overall size.
