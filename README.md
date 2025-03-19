@@ -1,6 +1,6 @@
 # Huffman Algorithm
 
-### Huffman Algorithm is a widely used data compression technique based on the frequency of characters. It uses variable-length encoding to minimize the overall size of the data. Here's how the algorithm works step by step:
+## Huffman Algorithm is a widely used data compression technique based on the frequency of characters. It uses variable-length encoding to minimize the overall size of the data. Here's how the algorithm works step by step:
 
 ## Steps of the Huffman Algorithm
 
